@@ -2,6 +2,8 @@
 
 ### Pre-requisites
 
+- Debian based Linux distro
+- sudo enabled user
 
 ## How to install Nomad
 
