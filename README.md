@@ -115,7 +115,7 @@ You should now have the following files:
 | nomad-ca-key.pem | CA private key. Keep safe!|
 | server.csr | Nomad server node certificate signing request for the global region|
 | server.pem | Nomad server node public certificate for the global region|
-| `server-key.pem` | Nomad server node private key for the global region|
+| server-key.pem | Nomad server node private key for the global region|
 
 Each Nomad node should have the appropriate key (-key.pem) and certificate (.pem) file for its region and role. In addition each node needs the CA's public certificate (nomad-ca.pem).
 
