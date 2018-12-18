@@ -15,18 +15,10 @@ Securing Nomad's cluster communication is not only important for security but ca
 
 ## How to install Nomad
 
-#### Make sure apt db is up to date
-
-SSH to Nomad machine and run
+#### Install required tools
 
 ```
-sudo apt-get update
-```
-
-#### Packages required for nomad & consul
-
-```
-sudo apt-get install unzip curl vim -y
+./install/tools.sh
 ```
 
 #### Installing Nomad
