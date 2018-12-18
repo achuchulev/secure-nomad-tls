@@ -9,6 +9,8 @@
 
 #### Make sure apt db is up to date
 
+SSH to Nomad machine and run
+
 ```
 sudo apt-get update
 ```
@@ -127,7 +129,7 @@ Each Nomad node should have the appropriate key (-key.pem) and certificate (.pem
 
 Nomad must be configured to use the newly-created key and certificates for (mutual) mTLS.
 
-Create (or download) server.hcl configuration file
+Create (or download) server1.hcl configuration file
 
 ```
 # Increase log verbosity
@@ -165,7 +167,7 @@ Note!
 
 ### Configure Nomad client
 
-Create (or download) client.hcl configuration file
+Create (or download) client1.hcl configuration file
 
 ```
 # Increase log verbosity
