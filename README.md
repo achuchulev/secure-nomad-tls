@@ -5,40 +5,34 @@
 
 ## How to install Nomad
 
-### Make sure apt db is up to date
+#### Make sure apt db is up to date
 
 ```
 sudo apt-get update
 ```
 
-### Packages required for nomad & consul
+#### Packages required for nomad & consul
 
 ```
 sudo apt-get install unzip curl vim -y
 ```
 
-### Installing Nomad
+#### Installing Nomad
 
 ```
 ./install-nomad.sh
 ```
 
-### Installing Consul
+#### Installing Consul
 
 ```
 ./install-consul.sh
 ```
 
-### Installing CFSSL: Cloudflare's PKI and TLS toolkit
+#### Installing CFSSL: Cloudflare's PKI and TLS toolkit
 
 ```
 ./install-cfssl.sh
-```
-
-### 
-
-```
-$ nomad -autocomplete-install
 ```
 
 ## How to secure Nomad with TLS
