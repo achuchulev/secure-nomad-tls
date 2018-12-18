@@ -107,19 +107,21 @@ Using localhost and 127.0.0.1 as subject alternate names (SANs) allows tools lik
 
 You should now have the following files:
 
-- `cfssl.json` - cfssl configuration.
-- `nomad-ca.csr` - CA signing request.
-- `nomad-ca-key.pem` - CA private key. Keep safe!
-- `nomad-ca.pem` - CA public certificate.
-- `cli.csr` - Nomad CLI certificate signing request.
-- `cli-key.pem` - Nomad CLI private key.
-- `cli.pem` - Nomad CLI certificate.
-- `client.csr` - Nomad client node certificate signing request for the global region.
-- `client-key.pem` - Nomad client node private key for the global region.
-- `client.pem` - Nomad client node public certificate for the global region.
-- `server.csr` - Nomad server node certificate signing request for the global region.
-- `server-key.pem` - Nomad server node private key for the global region.
-- `server.pem` - Nomad server node public certificate for the global region.
+| Filename        | Description  |
+| ------------- | -----|
+|`cfssl.json` | cfssl configuration|
+|`nomad-ca.csr` | CA signing request|
+| `nomad-ca-key.pem` | CA private key. Keep safe!|
+| `nomad-ca.pem` | CA public certificate|
+| `cli.csr` | Nomad CLI certificate signing request|
+| `cli-key.pem` | Nomad CLI private key|
+| `cli.pem` | Nomad CLI certificate|
+| `client.csr` | Nomad client node certificate signing request for the global region|
+| `client-key.pem` | Nomad client node private key for the global region|
+| `client.pem` | Nomad client node public certificate for the global region|
+| `server.csr` | Nomad server node certificate signing request for the global region|
+| `server-key.pem` | Nomad server node private key for the global region|
+| `server.pem` | Nomad server node public certificate for the global region|
 
 Each Nomad node should have the appropriate key (-key.pem) and certificate (.pem) file for its region and role. In addition each node needs the CA's public certificate (nomad-ca.pem).
 
