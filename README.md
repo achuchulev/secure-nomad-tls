@@ -15,36 +15,28 @@ Securing Nomad's cluster communication is not only important for security but ca
 
 ## How to install Nomad
 
-#### Make sure apt db is up to date
-
-SSH to Nomad machine and run
+#### Install required tools
 
 ```
-sudo apt-get update
-```
-
-#### Packages required for nomad & consul
-
-```
-sudo apt-get install unzip curl vim -y
+./install/tools.sh
 ```
 
 #### Installing Nomad
 
 ```
-./install-nomad.sh
+./install/nomad.sh
 ```
 
 #### Installing Consul
 
 ```
-./install-consul.sh
+./install/consul.sh
 ```
 
 #### Installing CFSSL: Cloudflare's PKI and TLS toolkit
 
 ```
-./install-cfssl.sh
+./install/install-cfssl.sh
 ```
 
 ## How to secure Nomad with TLS
@@ -224,10 +216,10 @@ Note!
 
 ```
 $ # In one terminal...
-$ nomad agent -config server1.hcl
+$ nomad agent -config config/server1.hcl
 
 $ # ...and in another
-$ nomad agent -config client1.hcl
+$ nomad agent -config config/client1.hcl
 ```
 
 ## How to access nomad
