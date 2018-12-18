@@ -32,19 +32,19 @@ sudo apt-get install unzip curl vim -y
 #### Installing Nomad
 
 ```
-./install-nomad.sh
+./install/nomad.sh
 ```
 
 #### Installing Consul
 
 ```
-./install-consul.sh
+./install/consul.sh
 ```
 
 #### Installing CFSSL: Cloudflare's PKI and TLS toolkit
 
 ```
-./install-cfssl.sh
+./instal/cfssl.sh
 ```
 
 ## How to secure Nomad with TLS
