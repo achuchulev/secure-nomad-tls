@@ -27,12 +27,6 @@ Securing Nomad's cluster communication is not only important for security but ca
 ./install/nomad.sh
 ```
 
-#### Installing Consul
-
-```
-./install/consul.sh
-```
-
 #### Installing CFSSL: Cloudflare's PKI and TLS toolkit
 
 ```
@@ -109,18 +103,18 @@ You should now have the following files:
 
 | Filename | Description |
 | ------------- | -----|
-| `cli.csr` | Nomad CLI certificate signing request|
-| `cli.pem` | Nomad CLI certificate|
-| `cli-key.pem` | Nomad CLI private key|
-| `client.csr` | Nomad client node certificate signing request for the global region|
-| `client.pem` | Nomad client node public certificate for the global region|
-| `client-key.pem` | Nomad client node private key for the global region|
-| `cfssl.json` | cfssl configuration|
-| `nomad-ca.csr` | CA signing request|
-| `nomad-ca.pem` | CA public certificate|
-| `nomad-ca-key.pem` | CA private key. Keep safe!|
-| `server.csr` | Nomad server node certificate signing request for the global region|
-| `server.pem` | Nomad server node public certificate for the global region|
+| cli.csr | Nomad CLI certificate signing request|
+| cli.pem | Nomad CLI certificate|
+| cli-key.pem | Nomad CLI private key|
+| client.csr | Nomad client node certificate signing request for the global region|
+| client.pem | Nomad client node public certificate for the global region|
+| client-key.pem | Nomad client node private key for the global region|
+| cfssl.json | cfssl configuration|
+| nomad-ca.csr | CA signing request|
+| nomad-ca.pem | CA public certificate|
+| nomad-ca-key.pem | CA private key. Keep safe!|
+| server.csr | Nomad server node certificate signing request for the global region|
+| server.pem | Nomad server node public certificate for the global region|
 | `server-key.pem` | Nomad server node private key for the global region|
 
 Each Nomad node should have the appropriate key (-key.pem) and certificate (.pem) file for its region and role. In addition each node needs the CA's public certificate (nomad-ca.pem).
