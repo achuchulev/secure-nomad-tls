@@ -2,7 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "bento/ubuntu-16.04" # 16.04 LTS
+  config.vm.box = "achuchulev/xenial64"
+  config.vm.box_version = "0.0.1"
   config.vm.hostname = "nomad"
   #config.vm.provision "shell", inline: scripts/provision.sh, privileged: false
   #config.vm.provision "shell", path: "scripts/provision.sh", privileged: false
