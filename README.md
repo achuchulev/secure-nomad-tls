@@ -234,9 +234,9 @@ As Nomad CLI also searches environment variables for default values, the process
 
 ```
 $ export NOMAD_ADDR=https://localhost:4646
-$ export NOMAD_CACERT=nomad-ca.pem
-$ export NOMAD_CLIENT_CERT=cli.pem
-$ export NOMAD_CLIENT_KEY=cli-key.pem
+$ export NOMAD_CACERT=/the/path/to/nomad-ca.pem
+$ export NOMAD_CLIENT_CERT=/the/path/to/cli.pem
+$ export NOMAD_CLIENT_KEY=/the/path/to/cli-key.pem
 ```
 
 and then useing cli commands as usual will work fine.
