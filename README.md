@@ -227,16 +227,16 @@ Nomad CLI defaults to communicating via HTTP instead of HTTPS.
 To configure the local Nomad client to connect using TLS and specify your custom keys and certificates using the command line:
 
 ```
-nomad node status -ca-cert=nomad-ca.pem -client-cert=cli.pem -client-key=cli-key.pem -address=https://127.0.0.1:4646
+nomad node status -ca-cert=/path/to/nomad-ca.pem -client-cert=/path/to/cli.pem -client-key=/path/to/cli-key.pem -address=https://127.0.0.1:4646
 ```
 
 As Nomad CLI also searches environment variables for default values, the process can be simplified exporting environment variables like shown below:
 
 ```
 $ export NOMAD_ADDR=https://localhost:4646
-$ export NOMAD_CACERT=/the/path/to/nomad-ca.pem
-$ export NOMAD_CLIENT_CERT=/the/path/to/cli.pem
-$ export NOMAD_CLIENT_KEY=/the/path/to/cli-key.pem
+$ export NOMAD_CACERT=/path/to/nomad-ca.pem
+$ export NOMAD_CLIENT_CERT=/path/to/cli.pem
+$ export NOMAD_CLIENT_KEY=/path/to/cli-key.pem
 ```
 
 and then useing cli commands as usual will work fine.
