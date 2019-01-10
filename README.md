@@ -275,3 +275,7 @@ server {
   encrypt = "cg8StVXbQJ0gPvMd9o7yrg=="
 }
 ```
+
+<img src="diagrams/Nomad_with_mTLS.png" width="646" height="429" />
+
+       
