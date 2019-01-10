@@ -220,7 +220,7 @@ $ nomad agent -config client1.hcl
 
 ## How to access nomad
 
-### via CLI on 
+### via CLI
 
 Nomad CLI defaults to communicating via HTTP instead of HTTPS. 
 
