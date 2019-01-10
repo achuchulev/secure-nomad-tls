@@ -276,6 +276,6 @@ server {
 }
 ```
 
-<img src="diagrams/Nomad_with_mTLS.png" width="646" height="429" />
+<img src="diagrams/Nomad_with_mTLS.png" />
 
        
