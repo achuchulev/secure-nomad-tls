@@ -9,28 +9,26 @@ Securing Nomad's cluster communication is not only important for security but ca
 
 ### Pre-requisites
 
-- Debian based Linux distro
-- sudo enabled user
+- vagrant
+- virtualbox
 - git
 
 ## How to install Nomad
 
-#### Install required tools
+- Get the repo
 
 ```
-./install/tools.sh
+git clone https://github.com/achuchulev/vagrant-nomad-mtls.git
+cd vagrant-nomad-mtls
 ```
 
-#### Installing Nomad
+- Run `vagrant up` that will spin up a virtualbox vm and execute scripts that:
 
 ```
-./install/nomad.sh
-```
+./install/tools.sh # install required tools
+./install/nomad.sh # install nomad
+./instal/cfssl.sh # install CFSSL: Cloudflare's PKI and TLS toolkit
 
-#### Installing CFSSL: Cloudflare's PKI and TLS toolkit
-
-```
-./instal/cfssl.sh
 ```
 
 ## How to secure Nomad with TLS
