@@ -277,7 +277,7 @@ server {
   # Self-elect, should be 3 or 5 for production
   bootstrap_expect = 1
 
-  _# Encrypt gossip communication_
-  _encrypt = "cg8StVXbQJ0gPvMd9o7yrg=="_
+  # Encrypt gossip communication
+  encrypt = "cg8StVXbQJ0gPvMd9o7yrg=="
 }
 ```
