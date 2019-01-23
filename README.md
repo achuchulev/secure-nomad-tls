@@ -15,11 +15,12 @@ Securing Nomad's cluster communication is not only important for security but ca
 
 ## How to install Nomad
 
-- Get the repo
+- Get the repo and bring up the environment
 
 ```
 git clone https://github.com/achuchulev/vagrant-nomad-mtls.git
 cd vagrant-nomad-mtls
+vagrant up
 ```
 
 - Run `vagrant up` that will spin up a virtualbox vm and execute scripts that:
@@ -33,8 +34,13 @@ cd vagrant-nomad-mtls
 
 ## How to secure Nomad with TLS
 
-### Creating Certificates
+### ssh to virtualbox vm
 
+```
+vagrant ssh
+```
+
+### Create selfsigned certificates for Nomad cluster
 
 The first step to configuring TLS for Nomad is generating certificates. In order to prevent unauthorized cluster access, Nomad requires all certificates be signed by the same Certificate Authority (CA). This should be a private CA and not a public one as any certificate signed by this CA will be allowed to communicate with the cluster.
 
@@ -43,7 +49,7 @@ Note!
       Nomad certificates may be signed by intermediate CAs as long as the root CA is the same. Append all intermediate CAs to the cert_file.
 ```
 
-#### Certificate Authority
+- Certificate Authority
 
 This guide will use *cfssl* for CA to generate a private CA certificate and key:
 
@@ -54,7 +60,7 @@ $ cfssl print-defaults csr | cfssl gencert -initca - | cfssljson -bare nomad-ca
 
 The CA key (nomad-ca-key.pem) will be used to sign certificates for Nomad nodes and must be kept private. The CA certificate (nomad-ca.pem) contains the public key necessary to validate Nomad certificates and therefore must be distributed to every node that requires access.
 
-#### Node Certificates
+- Node Certificates
 
 Nomad certificates are signed with their region and role such as:
 
@@ -79,7 +85,7 @@ Create (or download) the following configuration file as cfssl.json to increase 
 }
 ```
 
-Generate a certificate for the Nomad server, client and CLI
+- Generate a certificate for the Nomad server, client and CLI
 
 ```
 $ # Generate a certificate for the Nomad server
