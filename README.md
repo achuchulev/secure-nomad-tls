@@ -13,7 +13,7 @@ Securing Nomad's cluster communication is not only important for security but ca
 - virtualbox
 - git
 
-## How to install Nomad
+## How to run
 
 - Get the repo and bring up the environment
 
