@@ -153,9 +153,9 @@ tls {
   http = true
   rpc  = true
 
-  ca_file   = "nomad-ca.pem"
-  cert_file = "server.pem"
-  key_file  = "server-key.pem"
+  ca_file   = "/path/to/nomad-ca.pem"
+  cert_file = "/path/to/server.pem"
+  key_file  = "/path/to/server-key.pem"
 
   verify_server_hostname = true
   verify_https_client    = true
@@ -198,9 +198,9 @@ tls {
   http = true
   rpc  = true
 
-  ca_file   = "nomad-ca.pem"
-  cert_file = "client.pem"
-  key_file  = "client-key.pem"
+  ca_file   = "/path/to/nomad-ca.pem"
+  cert_file = "/path/to/client.pem"
+  key_file  = "/path/to/client-key.pem"
 
   verify_server_hostname = true
   verify_https_client    = true
@@ -218,10 +218,10 @@ Note!
 
 ```
 $ # In one terminal...
-$ nomad agent -config server1.hcl
+$ nomad agent -config /path/to/server1.hcl
 
 $ # ...and in another
-$ nomad agent -config client1.hcl
+$ nomad agent -config /path/to/client1.hcl
 ```
 
 ## How to access nomad
@@ -277,7 +277,7 @@ server {
   # Self-elect, should be 3 or 5 for production
   bootstrap_expect = 1
 
-  # Encrypt gossip communication
-  encrypt = "cg8StVXbQJ0gPvMd9o7yrg=="
+  _# Encrypt gossip communication_
+  _encrypt = "cg8StVXbQJ0gPvMd9o7yrg=="_
 }
 ```
