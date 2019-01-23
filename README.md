@@ -1,4 +1,4 @@
-# A sample repo with example of securing Nomad with TLS
+# A sample repo with example of securing Nomad with mutual TLS (mTLS)
 
 Securing Nomad's cluster communication is not only important for security but can even ease operations by preventing mistakes and misconfigurations. Nomad optionally uses mutual TLS (mTLS) for all HTTP and RPC communication. Nomad's use of mTLS provides the following properties:
 
