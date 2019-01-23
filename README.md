@@ -207,11 +207,6 @@ tls {
 }
 ```
 
-```
-Note!
-      The file lines should point to wherever you placed the certificate files on the node. This guide assumes they are in Nomad's current directory.
-```
-
 ## How to run Nomad with TLS
 
 ### Start Nomad server and client on the same machine
